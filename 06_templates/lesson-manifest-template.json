@@ -1,0 +1,162 @@
+{
+  "lesson_id": "SC000",
+  "title": "教材名",
+  "spec_version": "1.0",
+  "manifest_version": "1.0",
+  "status": "draft",
+
+  "generated_by": "Claude Code",
+  "generated_at": "YYYY-MM-DDTHH:MM:SS+09:00",
+
+  "scratch": {
+    "version": "3.0",
+    "extensions": []
+  },
+
+  "files": {
+    "start_sb3": "02_lessons/SC000/scratch/dist/SC000_start.sb3",
+    "complete_sb3": "02_lessons/SC000/scratch/dist/SC000_complete.sb3",
+    "start_project_json": "02_lessons/SC000/scratch/source/start/project.json",
+    "complete_project_json": "02_lessons/SC000/scratch/source/complete/project.json"
+  },
+
+  "sprites": [
+    {
+      "name": "プレイヤー",
+      "role": "player",
+      "visible": true,
+      "costumes": [
+        {
+          "name": "コスチューム1",
+          "asset_id": "A0001",
+          "file": "example.svg"
+        }
+      ],
+      "sounds": []
+    }
+  ],
+
+  "stage": {
+    "backdrops": [
+      {
+        "name": "背景1",
+        "asset_id": "A0002",
+        "file": "example.png"
+      }
+    ],
+    "sounds": []
+  },
+
+  "variables": [
+    {
+      "name": "スコア",
+      "scope": "global",
+      "initial_value": 0,
+      "used_in_steps": [
+        "STEP 3"
+      ]
+    }
+  ],
+
+  "lists": [],
+
+  "broadcasts": [
+    {
+      "name": "ゲームスタート",
+      "used_in_steps": [
+        "STEP 1"
+      ]
+    }
+  ],
+
+  "blocks": [
+    {
+      "category": "event",
+      "display_name": "緑の旗が押されたとき",
+      "opcode": "event_whenflagclicked",
+      "used_in_steps": [
+        "STEP 1"
+      ]
+    },
+    {
+      "category": "control",
+      "display_name": "ずっと",
+      "opcode": "control_forever",
+      "used_in_steps": [
+        "STEP 1"
+      ]
+    }
+  ],
+
+  "assets": [
+    {
+      "asset_id": "A0001",
+      "type": "sprite",
+      "name": "プレイヤー",
+      "file": "example.svg",
+      "source": "教材素材",
+      "license_recorded": false
+    },
+    {
+      "asset_id": "A0002",
+      "type": "backdrop",
+      "name": "背景1",
+      "file": "example.png",
+      "source": "教材素材",
+      "license_recorded": false
+    }
+  ],
+
+  "step_mapping": [
+    {
+      "step_id": "STEP 1",
+      "title": "STEPタイトル",
+      "sprites": [
+        "プレイヤー"
+      ],
+      "variables": [],
+      "broadcasts": [
+        "ゲームスタート"
+      ],
+      "blocks": [
+        "event_whenflagclicked",
+        "control_forever"
+      ]
+    }
+  ],
+
+  "completion_checks": [
+    {
+      "id": "C001",
+      "description": "完成条件1",
+      "verified": false
+    },
+    {
+      "id": "C002",
+      "description": "完成条件2",
+      "verified": false
+    }
+  ],
+
+  "web_sync": {
+    "sprite_names_match": false,
+    "variable_names_match": false,
+    "broadcast_names_match": false,
+    "backdrop_names_match": false,
+    "asset_paths_match": false,
+    "step_mapping_match": false
+  },
+
+  "validation": {
+    "project_json_valid": false,
+    "start_sb3_valid": false,
+    "complete_sb3_valid": false,
+    "spec_version_match": false,
+    "required_assets_present": false,
+    "notes": []
+  },
+
+  "known_issues": [],
+
+  "notes": []
+}
